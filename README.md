@@ -21,4 +21,16 @@ Azért nem adtam neki semmilyen licenszt, mert használ kedvedre, módosítsad, 
 A fájlkezelő résznél, próbáltam beilleszteni pár olyan funkciót melyet hiányolok a népszerű fájlkezelőkből:  windows subsystem for linux  fájl elérése, docker fájljainak elérése, wsl alatt futó fájlszerkesztők használata windows alatt. De belekerült a windows jobb klikk menüjében lévő megnyitás más alkalmazással... Lásd a képen. 
 <img width="1116" height="621" alt="image" src="https://github.com/user-attachments/assets/59c7c5b2-ba0c-45ad-9678-aa4d1cd8892c" />
 
+## Verziók
+
+| Csomag | hermes-agent | Megjegyzés |
+|---|---|---|
+| `hermes_tui_overlay_v1.2.zip` | — | a korábbi csomag |
+| `hermes_tui_overlay_v3.0_0203.zip` | **0.20.3** | a jelenlegi csomag |
+
+A **v3.0** (0.20.3) változásai a korábbihoz képest:
+- a hermes-agent **0.20.3** alá készült, a telepítő ellenőrzi a verziót
+- backup készül a régi entry.js-ről: `entry.js.bak-0203` (visszaállítás: átnevezés)
+- a Model Favorites (F2) RPC-t a telepítő hozzáfűzi a gateway `methods_config.py`-jához, ha a hermes frissítés felülírta
+
 
