@@ -26,11 +26,19 @@ A fájlkezelő résznél, próbáltam beilleszteni pár olyan funkciót melyet h
 | Csomag | hermes-agent | Megjegyzés |
 |---|---|---|
 | `hermes_tui_overlay_v1.2.zip` | — | a korábbi csomag |
-| `hermes_tui_overlay_v3.0_0203.zip` | **0.20.3** | a jelenlegi csomag |
+| `hermes_tui_overlay_v3.0_0203.zip` | **0.20.3** | a korábbi 0.20.3-as csomag |
+| `hermes_tui_overlay_v3.1_0204.zip` | **0.20.4** | a jelenlegi csomag |
 
 A **v3.0** (0.20.3) változásai a korábbihoz képest:
 - a hermes-agent **0.20.3** alá készült, a telepítő ellenőrzi a verziót
 - backup készül a régi entry.js-ről: `entry.js.bak-0203` (visszaállítás: átnevezés)
 - a Model Favorites (F2) RPC-t a telepítő hozzáfűzi a gateway `methods_config.py`-jához, ha a hermes frissítés felülírta
+
+A **v3.1** (0.20.4) változásai a v3.0-hoz képest:
+- a hermes-agent **0.20.4** alá készült (a telepítő ellenőrzi a verziót, backup: `entry.js.bak-0204`)
+- **F4 Memtest javítás (H16):** az "Üzenetek" szám az agent élő transcriptjéből jön (`agent._session_messages`) — modell-fallback/redirect mellett sem marad 0
+- **Fájl diff (18. pont):** Alt+D / Compare módban Enter a `[≠]` fájlon / Manager → Fájlok diff — két hasáb (piros = csak balon, zöld = csak jobbon), Tab = eltérés-ugrás; bináris fájlnál (kép...) HEX mód
+- **Becsomagolás/Kicsomagolás (19. pont):** Alt+F5 (pack a másik panelre), Alt+F9 (extract), Archívum teszt (7z t) a kontext menüben — a 7z-t a Program Files-ból (Ninite) keresi, fallback PATH + C:\tmp\tools
+- a telepítő a fork gateway **`server.py`-t is telepíti** (backup: `server.py.bak-0204`), hogy a memtest/diff RPC-k is meglegyenek
 
 
