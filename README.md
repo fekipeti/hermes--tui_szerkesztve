@@ -27,7 +27,8 @@ A fájlkezelő résznél, próbáltam beilleszteni pár olyan funkciót melyet h
 |---|---|---|
 | `hermes_tui_overlay_v1.2.zip` | — | a korábbi csomag |
 | `hermes_tui_overlay_v3.0_0203.zip` | **0.20.3** | a korábbi 0.20.3-as csomag |
-| `hermes_tui_overlay_v3.1_0204.zip` | **0.20.4** | a jelenlegi csomag |
+| `hermes_tui_overlay_v3.1_0204.zip` | **0.20.4** | a korábbi 0.20.4-es csomag |
+| `hermes_tui_overlay_v3.2_0204.zip` | **0.20.4** | a jelenlegi csomag (2026-08-24, a 24 pont lezárva) |
 
 A **v3.0** (0.20.3) változásai a korábbihoz képest:
 - a hermes-agent **0.20.3** alá készült, a telepítő ellenőrzi a verziót
@@ -40,5 +41,15 @@ A **v3.1** (0.20.4) változásai a v3.0-hoz képest:
 - **Fájl diff (18. pont):** Alt+D / Compare módban Enter a `[≠]` fájlon / Manager → Fájlok diff — két hasáb (piros = csak balon, zöld = csak jobbon), Tab = eltérés-ugrás; bináris fájlnál (kép...) HEX mód
 - **Becsomagolás/Kicsomagolás (19. pont):** Alt+F5 (pack a másik panelre), Alt+F9 (extract), Archívum teszt (7z t) a kontext menüben — a 7z-t a Program Files-ból (Ninite) keresi, fallback PATH + C:\tmp\tools
 - a telepítő a fork gateway **`server.py`-t is telepíti** (backup: `server.py.bak-0204`), hogy a memtest/diff RPC-k is meglegyenek
+
+A **v3.2** (0.20.4, 2026-08-24) változásai a v3.1-hez képest — **a 24 pontos DN-lista LECLÁRVA**:
+- **Rendszerinfó ablak:** Ctrl+I / Utilities → Hermes & PC → Rendszerinfó — Windows + MINDEN WSL-distró (uname/free/df/uptime), 4 állapot-gomb (LAN/WiFi/BT/Akku), R = frissítés
+- **Vágólap lista (26. pont):** File menü → Vágólap... / Ctrl+Shift+V — a vágólap előzményei (max 50 + pin, R = rögzítés, kép is)
+- **Kis eszközök (8. pont):** Utilities → Hermes & PC → Kis eszközök — Számológép / Naptár / ASCII tábla (Tab váltás)
+- **Gyorsfeljegyzés (22. pont):** Ctrl+Z — a fájl leírása a Desc oszlopba, `descript.ion` (a Total Commander formátuma, megosztott)
+- **Fájlkódolás (23. pont):** kontext menü → Kódolás (Base64)... — `.b64` a másik panelre / vágólapra / visszafejtés
+- **Kijelölés-mentés (20. pont):** kontext menü — `kijeloles.lst` mentés/visszaállítás
+- **Chmod/Link (21. pont):** WSL-útvonalon kontext menü → Jogok (chmod) / Szimbolikus link (wsl.exe)
+- **VFS (24. pont):** archívumra Enter = belépés — a zip/7z belülről böngészhető, F5 = kicsomagolás a másik panelre
 
 
