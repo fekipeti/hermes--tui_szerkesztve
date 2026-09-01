@@ -28,7 +28,8 @@ A fájlkezelő résznél, próbáltam beilleszteni pár olyan funkciót melyet h
 | `hermes_tui_overlay_v1.2.zip` | — | a korábbi csomag |
 | `hermes_tui_overlay_v3.0_0203.zip` | **0.20.3** | a korábbi 0.20.3-as csomag |
 | `hermes_tui_overlay_v3.1_0204.zip` | **0.20.4** | a korábbi 0.20.4-es csomag |
-| `hermes_tui_overlay_v3.2_0204.zip` | **0.20.4** | a jelenlegi csomag (2026-08-24, a 24 pont lezárva) |
+| `hermes_tui_overlay_v3.2_0204.zip` | **0.20.4** | a korábbi 0.20.4-es csomag (2026-08-24, a 24 pont lezárva) |
+| `hermes_tui_overlay_v3.3_0204.zip` | **0.20.4** | a jelenlegi csomag (2026-09-01, DN sortávolság javítás H18) |
 
 A **v3.0** (0.20.3) változásai a korábbihoz képest:
 - a hermes-agent **0.20.3** alá készült, a telepítő ellenőrzi a verziót
@@ -51,5 +52,8 @@ A **v3.2** (0.20.4, 2026-08-24) változásai a v3.1-hez képest — **a 24 ponto
 - **Kijelölés-mentés (20. pont):** kontext menü — `kijeloles.lst` mentés/visszaállítás
 - **Chmod/Link (21. pont):** WSL-útvonalon kontext menü → Jogok (chmod) / Szimbolikus link (wsl.exe)
 - **VFS (24. pont):** archívumra Enter = belépés — a zip/7z belülről böngészhető, F5 = kicsomagolás a másik panelre
+
+A **v3.3** (0.20.4, 2026-09-01) változásai a v3.2-höz képest:
+- **DN sortávolság javítás (H18):** a fájlkezelő sorai 2-3 karaktercella magasak voltak (a `nameCol = panelW - 16 - descCol` képlet miatt a sor szövege 5 karakterrel túlfolyt, és a hermes-ink wrap-elte — a lista harmadára zsugorodott, a ki nem férő könyvtárak nem voltak elérhetők). Javítva: `nameCol = panelW - 23 - descCol` — újra 1 sor/elem, a teljes lista görgethető. (A Windows-frissítés KB5120998 NEM volt az ok — a hiba a 08-25-i kódból jött.)
 
 
